@@ -14,16 +14,16 @@ namespace blueskyapi.Controllers
         LinqToSqlDataContext linq = new LinqToSqlDataContext();
 
         [HttpGet]
-        public Sesion LogIn (int carnet) {
+        public Sesion LogIn (int carnet, string contrasenha) {
 
-            List<Sesion> candidatos = new List<Sesion>();
+            List<Usuario> candidatos = new List<Usuario>();
 
             var usuario_1 = (   from profesor in linq.PROFESOR
                                 where profesor.CARNET == carnet
                                 select profesor );
 
             foreach (PROFESOR profesor in usuario_1) {
-                Sesion usuario = new Sesion() {
+                Usuario usuario = new Usuario() {
                     Carnet = (int) profesor.CARNET,
                     Contrasenha = profesor.CONTRASENHA,
                     Correo = profesor.CORREO,
@@ -35,11 +35,11 @@ namespace blueskyapi.Controllers
 
             if(candidatos.Count == 0) {
                 var usuario_2 = ( from estudiante in linq.ESTUDIANTE
-                                  where estudiante.CARNET == carnet
-                                  select estudiante);
+                                    where estudiante.CARNET == carnet
+                                    select estudiante);
 
                 foreach (ESTUDIANTE estudiante in usuario_2 ) {
-                    Sesion usuario = new Sesion() {
+                    Usuario usuario = new Usuario() {
                         Carnet = (int) estudiante.CARNET,
                         Contrasenha = estudiante.CONTRASENHA,
                         Correo = estudiante.CORREO,
@@ -49,9 +49,16 @@ namespace blueskyapi.Controllers
                     candidatos.Add(usuario);
                 }
             }
-            return candidatos.ElementAt(0);
+
+            if ( candidatos.Count == 0 )
+                return new Sesion() { Mensaje = "Ningún usuario coincide con ´la información brindada" };
+
+            Usuario usuario_3 = candidatos.ElementAt(0);
+            if ( usuario_3.Contrasenha == contrasenha )
+                return new Sesion() { Usuario = candidatos.ElementAt(0) };
+            else
+                return new Sesion() { Mensaje = "La contraseña no coincide" };
+
         }
-
-
     }
 }
