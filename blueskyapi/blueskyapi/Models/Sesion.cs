@@ -7,76 +7,35 @@ namespace blueskyapi.Models
 {
     public class Sesion
     {
+        private Usuario usuario;
+        private string mensaje;
 
-        private int carnet;
-        private string contrasenha;
-        private string nombre;
-        private string correo;
-        private string tipo;
-
-        public int Carnet
+        public Usuario Usuario
         {
             get
             {
-                return carnet;
+                return usuario;
             }
 
             set
             {
-                this.carnet = value;
+                this.usuario = value;
             }
         }
 
-        public string Contrasenha
+        public string Mensaje
         {
             get
             {
-                return contrasenha;
+                return mensaje;
             }
 
             set
             {
-                this.contrasenha = value;
-            }
-        }
-
-        public string Nombre
-        {
-            get
-            {
-                return nombre;
-            }
-
-            set
-            {
-                this.nombre = value;
-            }
-        }
-
-        public string Correo
-        {
-            get
-            {
-                return correo;
-            }
-
-            set
-            {
-                this.correo = value;
-            }
-        }
-
-        public string Tipo
-        {
-            get
-            {
-                return tipo;
-            }
-
-            set
-            {
-                this.tipo = value;
+                this.mensaje = value;
             }
         }
     }
+
+
 }
