@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="blueskytec" Class="LinqToSqlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=blueskytec.database.windows.net;Initial Catalog=blueskytec;Persist Security Info=True;User ID=blueskytec" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="blueskytecConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ASIGNACION" Member="ASIGNACION">
+    <Type Name="ASIGNACION">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CURSO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MEDIO_ENTREGA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PORCENTAJE" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_ENTREGA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Association Name="ASIGNACION_ASIGNACION_ESTUDIANTE" Member="ASIGNACION_ESTUDIANTE" ThisKey="ID" OtherKey="ASIGNACION" Type="ASIGNACION_ESTUDIANTE" />
+      <Association Name="CURSO_ASIGNACION" Member="CURSO1" ThisKey="CURSO" OtherKey="ID" Type="CURSO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ASIGNACION_ESTUDIANTE" Member="ASIGNACION_ESTUDIANTE">
+    <Type Name="ASIGNACION_ESTUDIANTE">
+      <Column Name="ESTUDIANTE" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ASIGNACION" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PORCENTAJE_OBTENIDO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CALIFICACION" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="ASIGNACION_ASIGNACION_ESTUDIANTE" Member="ASIGNACION1" ThisKey="ASIGNACION" OtherKey="ID" Type="ASIGNACION" IsForeignKey="true" />
+      <Association Name="ESTUDIANTE_ASIGNACION_ESTUDIANTE" Member="ESTUDIANTE1" ThisKey="ESTUDIANTE" OtherKey="CARNET" Type="ESTUDIANTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CURSO" Member="CURSO">
+    <Type Name="CURSO">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NGRUPO" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PROFESOR" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_INICIO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="CURSO_ASIGNACION" Member="ASIGNACION" ThisKey="ID" OtherKey="CURSO" Type="ASIGNACION" />
+      <Association Name="CURSO_CURSO_ESTUDIANTE" Member="CURSO_ESTUDIANTE" ThisKey="ID" OtherKey="CURSO" Type="CURSO_ESTUDIANTE" />
+      <Association Name="CURSO_MENSAJE" Member="MENSAJE" ThisKey="ID" OtherKey="CURSO" Type="MENSAJE" />
+      <Association Name="PROFESOR_CURSO" Member="PROFESOR1" ThisKey="PROFESOR" OtherKey="CARNET" Type="PROFESOR" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CURSO_ESTUDIANTE" Member="CURSO_ESTUDIANTE">
+    <Type Name="CURSO_ESTUDIANTE">
+      <Column Name="ESTUDIANTE" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CURSO" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CURSO_CURSO_ESTUDIANTE" Member="CURSO1" ThisKey="CURSO" OtherKey="ID" Type="CURSO" IsForeignKey="true" />
+      <Association Name="ESTUDIANTE_CURSO_ESTUDIANTE" Member="ESTUDIANTE1" ThisKey="ESTUDIANTE" OtherKey="CARNET" Type="ESTUDIANTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTUDIANTE" Member="ESTUDIANTE">
+    <Type Name="ESTUDIANTE">
+      <Column Name="CARNET" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CONTRASENHA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CORREO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ESTUDIANTE_ASIGNACION_ESTUDIANTE" Member="ASIGNACION_ESTUDIANTE" ThisKey="CARNET" OtherKey="ESTUDIANTE" Type="ASIGNACION_ESTUDIANTE" />
+      <Association Name="ESTUDIANTE_CURSO_ESTUDIANTE" Member="CURSO_ESTUDIANTE" ThisKey="CARNET" OtherKey="ESTUDIANTE" Type="CURSO_ESTUDIANTE" />
+      <Association Name="ESTUDIANTE_MENSAJE" Member="MENSAJE" ThisKey="CARNET" OtherKey="ESTUDIANTE" Type="MENSAJE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MENSAJE" Member="MENSAJE">
+    <Type Name="MENSAJE">
+      <Column Name="ESTUDIANTE" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PROFESOR" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CURSO" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CONTENIDO" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="ESTUDIANTE_MENSAJE" Member="ESTUDIANTE1" ThisKey="ESTUDIANTE" OtherKey="CARNET" Type="ESTUDIANTE" IsForeignKey="true" />
+      <Association Name="CURSO_MENSAJE" Member="CURSO1" ThisKey="CURSO" OtherKey="ID" Type="CURSO" IsForeignKey="true" />
+      <Association Name="PROFESOR_MENSAJE" Member="PROFESOR1" ThisKey="PROFESOR" OtherKey="CARNET" Type="PROFESOR" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROFESOR" Member="PROFESOR">
+    <Type Name="PROFESOR">
+      <Column Name="CARNET" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CONTRASENHA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CORREO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PROFESOR_CURSO" Member="CURSO" ThisKey="CARNET" OtherKey="PROFESOR" Type="CURSO" />
+      <Association Name="PROFESOR_MENSAJE" Member="MENSAJE" ThisKey="CARNET" OtherKey="PROFESOR" Type="MENSAJE" />
+    </Type>
+  </Table>
+</Database>
