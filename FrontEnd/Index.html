@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<HTML ng-app="MyFirstApp">
+    <HEAD>
+        <TITLE>Bluesky</TITLE>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="CSS/LoginCSS.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="Controllers/LoginController.js"></script>
+        
+    </HEAD>
+
+    <BODY ng-controller="LoginController">
+        
+        <div class="login">
+            <div class="login-triangle"></div>
+            <h2 class="login-header">Iniciar Sesión</h2>
+            <form class="login-container">
+                <p><input type="email" placeholder="Carnet"></p>
+                <p><input type="password" placeholder="Contraseña"></p>
+                <p><input type="submit" value="Log in"></p>
+            </form>
+        </div>
+        
+    </BODY>
+
+</HTML>
