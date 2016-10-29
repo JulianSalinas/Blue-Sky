@@ -13,3 +13,6 @@ http://blueskytec.azurewebsites.net/api/Login?carnet=2007641672&contrasenha=VLY3
 Dentro de la informacion que posee cada curso tambien estan los estudiantes quiene lo reciben
 http://blueskytec.azurewebsites.net/api/Curso?idProfesor=2007641672
 
+
+
+JULIÁN LOCA..
