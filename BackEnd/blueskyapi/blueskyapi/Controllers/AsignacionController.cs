@@ -37,8 +37,10 @@ namespace blueskyapi.Controllers
             }
 
             return asignaciones;
-
         }
+
+
+
 
     }
 }

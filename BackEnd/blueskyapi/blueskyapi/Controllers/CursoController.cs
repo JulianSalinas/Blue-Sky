@@ -48,7 +48,7 @@ namespace blueskyapi.Controllers
             foreach ( var estudiante in consulta ) {
                 Estudiante est = new Estudiante() {
                     Carnet = (int) estudiante.ESTUDIANTE1.CARNET,
-                    Nombre = estudiante.ESTUDIANTE1.CORREO,
+                    Nombre = estudiante.ESTUDIANTE1.NOMBRE,
                     Correo = estudiante.ESTUDIANTE1.CORREO
                 };
                 estudiantes.Add(est);
