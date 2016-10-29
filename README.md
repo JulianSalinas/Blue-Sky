@@ -15,6 +15,3 @@ http://blueskytec.azurewebsites.net/api/Curso?idProfesor=2007641672
 
 #Obtener todas las asignaciones que contiene un curso dado
 http://blueskytec.azurewebsites.net/api/Asignacion?idCurso=03B4JCZOE3
-
-#Obtener las calificaciones de todos los alumnos para una asignacion dada
-http://blueskytec.azurewebsites.net/api/Calificacion?idAsignacion=0B24LFVFJ3
