@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SideBar Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="CSS/NavigationCSS.css">
+</head>
+<body>
+
+	<div id="sidebar">
+
+        <!--Para mostrar la informaciond del usuarios-->
+        <img class="centerImg" height="100px" width="100px" src="file:///E:/Documentos/GitHub/Blue-Sky/FrontEnd/Images/User.png"</li>
+        <label class="center">Nombre profesor</label>
+        <label class="center">Número de carnet</label>
+        <br><br>
+        
+        
+        <!--Items que va a tener el menu lateral-->
+		<ul>
+			<li><a href="#">Estudiantes</a></li>
+			<li><a href="#">Asignaciones</a></li>
+			<li><a href="#">Notas finales</a></li>
+			<li><a href="#">Acerca de</a></li>
+            
+            <!--Para seleccionar el grupo actual-->
+            <li><div class="styled-select semi-square">
+              <select>
+                <option>Este es el curso uno</option>
+                <option>Este es el curso dos</option>
+                <option>Este es el curso tres</option>
+              </select>
+            </div></li>
+		</ul>
+        
+    
+
+        <!--Botoncito para abrir el menu-->
+		<div id="sidebar-btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+	</div>
+
+	
+
+    <!--Para darle animacion al menu lateral-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function(){
+		$('#sidebar-btn').click(function(){
+			$('#sidebar').toggleClass('visible');
+		});
+	});
+
+	</script>
+
+</body>
+</html>

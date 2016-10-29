@@ -1,0 +1,117 @@
+body{
+	margin:0px;
+	padding:0px;
+	font-family:"Helvetica Neue", Helvetica, Arial;
+}
+
+
+#sidebar{
+    background: url("file:///E:/Documentos/GitHub/Blue-Sky/FrontEnd/Images/Panel.png");
+	/*background:#151718;*/
+	width:275px;
+	height:100%;
+	display:block;
+	position:absolute;
+	left:-275px;
+	top:0px;
+	transition:left 0.3s linear;
+}
+
+#sidebar.visible{
+	left:0px;
+	transition:left 0.4s linear;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+li {
+    float: bottom;
+    
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: dodgerblue;
+    
+}
+
+li a:hover {
+    background-color: #3b9eff;
+}
+
+#sidebar-btn{
+	display:inline-block;
+	vertical-align: middle;
+	width:20px;
+	height:15px;
+	cursor:pointer;
+	margin:20px;
+	position:absolute;
+	top:0px;
+	right:-60px;
+    
+}
+
+#sidebar-btn span{
+	height:1px;
+	background:#111;
+	margin-bottom:5px;
+	display:block;
+}
+
+#sidebar-btn span:nth-child(2){
+	width:75%;
+}
+
+#sidebar-btn span:nth-child(3){
+	width:50%;
+}
+
+.styled-select {
+    height: 29px;
+    overflow: hidden;
+    width: 275px;
+    background-color: #3b8ec2;
+    position: fixed;
+    bottom: 0;
+}
+
+.styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 275px;
+    color: #fff; 
+}
+
+.centerImg{
+    display: block;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.center{
+    display: block;
+    text-decoration-color: white;
+    color: white;
+    align-content: center;
+    text-align: center;
+    align-self: center;
+    font-size: 14px;
+    font-family: sans-serif;
+    
+}
