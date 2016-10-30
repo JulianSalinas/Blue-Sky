@@ -51,7 +51,7 @@ namespace blueskyapi.Controllers
             }
 
             if ( candidatos.Count == 0 )
-                return null;
+                return new Sesion() { Mensaje = "El usuario no existe" };
 
             Usuario usuario_3 = candidatos.ElementAt(0);
             if ( usuario_3.Contrasenha == contrasenha )
