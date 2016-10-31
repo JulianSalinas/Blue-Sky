@@ -14,7 +14,7 @@ http://blueskytec.azurewebsites.net/api/Login?idUser=()&password=()
 
 
 #UpdatePassword( string idUser, string oldpass, string newpass )
-http://blueskytec.azurewebsites.net/api/Login?idUser=()&oldpass=()&newppas=()
+http://blueskytec.azurewebsites.net/api/Login?idUser=()&oldpass=()&newpass=()
 
 
 #GetAllCourses( string idUser )
