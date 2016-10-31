@@ -25,11 +25,11 @@ http://blueskytec.azurewebsites.net/api/Course?idUser=()
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()
 
 
-#InsertStudent( string idCourse, string idStudentInsert ) --- requiere arreglo
+#InsertStudent( string idCourse, string idStudentInsert )
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()&idStudentInsert=()
 
 
-#DeleteStudent( string idCourse, string idStudentDelete ) --- requiere arreglo
+#DeleteStudent( string idCourse, string idStudentDelete )
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()&idStudentDelete=()
 
 
