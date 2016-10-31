@@ -3,10 +3,10 @@ Proyecto II de Requerimientos de Software
 
 USO DEL REST SERVICE
 
-
-#Notas
-Remplazar los parentesis por el parametro.
-"number" se refiere al número de la asignación en un curso
+#Datos personales para hacer pruebas 
+'2015114132','ABCdef123','Julian Salinas Rojas', 'july12sali@gmail.com','Profesor'
+'2015125414','ABCdef123','Armando López Cordero', 'armando12101996@gmail.com','Profesor'
+'2015114121','ABCdef123','Pablo Navarro Altamirano', 'Pablonavarro2015114121@gmail.com','Estudiante'
 
 
 #GetUserSession( string idUser, string password )
@@ -58,3 +58,8 @@ http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()
 
 #UpdateNote(string idStudent, string idCourse, int number, float percentage)
 http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()&number=()&percentage=()
+
+
+
+
+
