@@ -44,7 +44,7 @@ http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&title=()&type=()
 #UpdateAssignation(string idCourse, int number, string title, string type, string delivery, string deliverymeans, float percentage, string description ) 
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&number=()&title=()&type=()&delivery=()&deliverymeans=()&percentage=()&description=()
 
-#DeleteAssignation( string idCourse, int numberDelete )
+#DeleteAssignation( string idCourse, int numberDelete ) -- esta fallando
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&numberDelete=()
 
 
