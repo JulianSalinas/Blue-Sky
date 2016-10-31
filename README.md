@@ -33,11 +33,11 @@ http://blueskytec.azurewebsites.net/api/Course?idCourse=()&idStudentInsert=()
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()&idStudentDelete=()
 
 
-#GetAllAssignments( string idCourse ) --- hasta aqui voy revisando
+#GetAllAssignments( string idCourse )
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()
 
 
-#GetAllNotes( string idCourse, int number )
+#GetAllNotes( string idCourse, int number )--- hasta aqui voy revisando
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&number=()
 
 
