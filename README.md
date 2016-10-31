@@ -41,7 +41,7 @@ http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&title=()&type=()&delivery=()&deliverymeans=()&percentage=()&description=()
 
 
-UpdateAssignation(string idCourse, int number, string title, string type, string delivery, string deliverymeans, float percentage, string description ) 
+#UpdateAssignation(string idCourse, int number, string title, string type, string delivery, string deliverymeans, float percentage, string description ) 
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&number=()&title=()&type=()&delivery=()&deliverymeans=()&percentage=()&description=()
 
 #DeleteAssignation( string idCourse, int numberDelete )
