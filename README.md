@@ -37,24 +37,23 @@ http://blueskytec.azurewebsites.net/api/Course?idCourse=()&idStudentDelete=()
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()
 
 
-#GetAllNotes( string idCourse, int number )--- hasta aqui voy revisando
+#InsertAssignation( string idCourse, string title, string type, string delivery, string deliverymeans, float percentage, string description) .El type es si es indidual o en grupos.
+http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&title=()&type=()&delivery=()&deliverymeans=()&percentage=()&description=()
+
+
+UpdateAssignation(string idCourse, int number, string title, string type, string delivery, string deliverymeans, float percentage, string description ) 
+http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&number=()&title=()&type=()&delivery=()&deliverymeans=()&percentage=()&description=()
+
+#DeleteAssignation( string idCourse, int numberDelete )
+http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&numberDelete=()
+
+
+#GetAllNotes( string idCourse, int number )
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&number=()
 
 
 #GetAllStudentNotes( string idStudent, string idCourse ) 
 http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()
-
-
-#InsertAssignation( string idCourse, string title, string delivery, float percentage, string description)
-http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&title=()&delivery=()&percentage=()&description=()
-
-
-#UpdateAssignation(string idCourse, int number, string title, string delivery, float percentage, string description ) 
-http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&number=()&title=()&delivery=()&percentage=()&description=()
-
-
-#DeleteAssignation( string idCourse, int numberDelete )
-http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&numberDelete=()
 
 
 #UpdateNote(string idStudent, string idCourse, int number, float percentage)
