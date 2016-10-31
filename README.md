@@ -56,8 +56,8 @@ http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&number=()
 http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()
 
 
-#UpdateNote(string idStudent, string idCourse, int number, float percentage)
-http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()&number=()&percentage=()
+#UpdateNote(string idStudent, string idCourse, int number, float grade)
+http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()&number=()&grade=()
 
 
 
