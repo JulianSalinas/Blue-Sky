@@ -25,15 +25,15 @@ http://blueskytec.azurewebsites.net/api/Course?idUser=()
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()
 
 
-#InsertStudent( string idCourse, string idStudentInsert )
+#InsertStudent( string idCourse, string idStudentInsert ) --- requiere arreglo
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()&idStudentInsert=()
 
 
-#DeleteStudent( string idCourse, string idStudentDelete )
+#DeleteStudent( string idCourse, string idStudentDelete ) --- requiere arreglo
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()&idStudentDelete=()
 
 
-#GetAllAssignments( string idCourse )
+#GetAllAssignments( string idCourse ) --- hasta aqui voy revisando
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()
 
 
