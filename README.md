@@ -60,6 +60,14 @@ http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()
 http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()&number=()&grade=()
 
 
+#GetAllMessages( string idCourse, string idTeacher, string idStudent ) . Funciona bidireccionalmente
+http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&idTeacher=()&idStudent=()
+
+
+#SendMessage( string idCourse, string idSender, string idReceiver, string message )
+http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&idSender=()&idReceiver=()%message=()
+
+
 
 
 
