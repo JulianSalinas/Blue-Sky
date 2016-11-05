@@ -3,71 +3,71 @@ Proyecto II de Requerimientos de Software
 
 USO DEL REST SERVICE
 
-#GetUserSession( string idUser, string password )
+#GetUserSession(idUser,password )
 http://blueskytec.azurewebsites.net/api/Login?idUser=()&password=()
 
 
-#UpdatePassword( string idUser, string oldpass, string newpass )
+#UpdatePassword( idUser, oldpass, newpass )
 http://blueskytec.azurewebsites.net/api/Login?idUser=()&oldpass=()&newpass=()
 
 
-#GetAllCourses( string idUser )
+#GetAllCourses( idUser )
 http://blueskytec.azurewebsites.net/api/Course?idUser=()
 
 
-#GetAllStudents( string idCourse )
+#GetAllStudents( idCourse )
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()
 
 
-#InsertStudent( string idCourse, string idStudentInsert )
+#InsertStudent( idCourse, idStudentInsert )
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()&idStudentInsert=()
 
 
-#DeleteStudent( string idCourse, string idStudentDelete )
+#DeleteStudent( idCourse, idStudentDelete )
 http://blueskytec.azurewebsites.net/api/Course?idCourse=()&idStudentDelete=()
 
 
-#GetAllAssignments( string idCourse )
+#GetAllAssignments( idCourse )
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()
 
 
-#InsertAssignation( string idCourse, string title, string type, string delivery, string deliverymeans, float percentage, string description) .El type es si es indidual o en grupos.
+#InsertAssignation(idCourse, title, type, delivery, deliverymeans, percentage, description)
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&title=()&type=()&delivery=()&deliverymeans=()&percentage=()&description=()
 
 
-#UpdateAssignation(string idCourse, int number, string title, string type, string delivery, string deliverymeans, float percentage, string description ) 
+#UpdateAssignation(idCourse, number, title, type, delivery, deliverymeans, percentage, description ) 
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&number=()&title=()&type=()&delivery=()&deliverymeans=()&percentage=()&description=()
 
-#DeleteAssignation( string idCourse, int numberDelete )
+#DeleteAssignation( idCourse, numberDelete )
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&numberDelete=()
 
 
-#GetAllNotes( string idCourse, int number )
+#GetAllNotes( idCourse, number )
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&number=()
 
 
-#GetAllStudentNotes( string idStudent, string idCourse ) 
+#GetAllStudentNotes( idStudent, idCourse ) 
 http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()
 
 
-#UpdateNote(string idStudent, string idCourse, int number, float grade)
+#UpdateNote(idStudent, idCourse, number, grade)
 http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()&number=()&grade=()
 
 
-#GetAllMessages( string idCourse, string idTeacher, string idStudent ) . Funciona bidireccionalmente
+#GetAllMessages( idCourse, idTeacher, idStudent ) . Funciona bidireccionalmente
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&idTeacher=()&idStudent=()
 
 
-#SendMessage( string idCourse, string idSender, string idReceiver, string message )
+#SendMessage( idCourse, idSender, idReceiver, message )
 http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&idSender=()&idReceiver=()%message=()
 
 
-#GetFinalNotes( string idCourse ) 
+#GetFinalNotes( idCourse ) 
 http://blueskytec.azurewebsites.net/api/FinalNote?idCourse=IC01160_2016_01
 
 
-#SummitNotes(string idCourseToSummitNotes)
-http://blueskytec.azurewebsites.net/api/FinalNote?idCourse=IC01160_2016_01
+#SummitNotes(  idCourseToSummitNotes )
+http://blueskytec.azurewebsites.net/api/FinalNote?idCourseToSummitNotes=IC01160_2016_01
 
 
 #Lista de usuarios disponibles para hacer pruebas
