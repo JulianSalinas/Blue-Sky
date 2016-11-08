@@ -3,6 +3,11 @@ Proyecto II de Requerimientos de Software
 
 USO DEL REST SERVICE
 
+#CreateUser(name,password,email, role) 
+*Poner el rol empezando con mayuscula
+*El carnet se genera solo
+http://blueskytec.azurewebsites.net/api/Login?name=Esteban Quito&password=123&email=esteban123@example.com&role=Estudiante
+
 #GetUserSession(idUser,password )
 http://blueskytec.azurewebsites.net/api/Login?idUser=()&password=()
 
