@@ -55,11 +55,11 @@ http://blueskytec.azurewebsites.net/api/Assignation?idStudent=()&idCourse=()&num
 
 
 #GetAllMessages( idCourse, idTeacher, idStudent ) . Funciona bidireccionalmente
-http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&idTeacher=()&idStudent=()
+http://blueskytec.azurewebsites.net/api/Message?idCourse=IC01160_2016_01&idTeacher=2015114132&idStudent=2015114121
 
 
 #SendMessage( idCourse, idSender, idReceiver, message )
-http://blueskytec.azurewebsites.net/api/Assignation?idCourse=()&idSender=()&idReceiver=()%message=()
+http://blueskytec.azurewebsites.net/api/Message?idCourse=IC01160_2016_01&idSender=2015114121&idReceiver=2015114132&message=()
 
 
 #GetFinalNotes( idCourse ) 
